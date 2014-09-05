@@ -62,3 +62,10 @@ nnoremap tn  :tabnew<CR>
 
 " Don't start ed compatibility mode
 nnoremap Q <nop>
+
+" Map Escape to Tab, make you unutterably happy
+nnoremap <Tab> <Esc>
+vnoremap <Tab> <Esc>gV
+onoremap <Tab> <Esc>
+inoremap <Tab> <Esc>`^
+inoremap <Leader><Tab> <Tab>
