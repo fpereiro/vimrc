@@ -1,7 +1,8 @@
-" Don't know if this is really necessary, but...
+" Turn off compatibility mode for vi
 set nocompatible
 syntax on
 
+" Make backspace work properly
 set backspace=indent,eol,start
 
 " Indentation
@@ -32,7 +33,7 @@ elseif has ("unix")
   set gfn=Monospace\ 12
 endif
 
-" Search
+" Highlight search and make search incremental (as you type)
 set hlsearch
 set incsearch
 
@@ -50,7 +51,7 @@ set autochdir
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 
 " Show/hide hidden characters with ,l
-nmap ,l :set list!
+nnoremap ,l :set list!<CR>
 
 " Tab shortcuts
 nnoremap th  :tabfirst<CR>
@@ -62,3 +63,6 @@ nnoremap tn  :tabnew<CR>
 
 " Don't start ed compatibility mode
 nnoremap Q <nop>
+
+" Toggle paste/nopaste with F8
+set pastetoggle=<F8>
