@@ -26,13 +26,6 @@ set nowritebackup
 " Colorscheme
 colorscheme koehler
 
-" Font (taken from http://amix.dk/vim/vimrc.html)
-if has ("win32")
-  set gfn=Consolas:h12
-elseif has ("unix")
-  set gfn=Monospace\ 12
-endif
-
 " Highlight search and make search incremental (as you type)
 set hlsearch
 set incsearch
@@ -60,9 +53,11 @@ nnoremap tk  :tabnext<CR>
 nnoremap tl  :tablast<CR>
 nnoremap td  :tabclose<CR>
 nnoremap tn  :tabnew<CR>
+nnoremap t[  :tabmove -1<CR>
+nnoremap t]  :tabmove +1<CR>
 
 " Don't start ed compatibility mode
 nnoremap Q <nop>
 
-" Toggle paste/nopaste with F8
-set pastetoggle=<F8>
+" Toggle paste/nopaste with comma + p
+set pastetoggle=,p
