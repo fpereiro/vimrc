@@ -43,9 +43,6 @@ set autochdir
 " Remove any trailing whitespace that is in the file
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 
-" Show/hide hidden characters with ,l
-nnoremap ,l :set list!<CR>
-
 " Tab shortcuts
 nnoremap th  :tabfirst<CR>
 nnoremap tj  :tabprev<CR>
@@ -59,5 +56,11 @@ nnoremap t]  :tabmove +1<CR>
 " Don't start ed compatibility mode
 nnoremap Q <nop>
 
-" Toggle paste/nopaste with comma + p
+" Show/hide hidden characters with ,l
+nnoremap ,l :set list!<CR>
+
+" Toggle paste/nopaste with ,p
 set pastetoggle=,p
+
+" Show number of matches with ,c (http://stackoverflow.com/questions/4668623/show-count-of-matches-in-vim)
+nnoremap ,c :%s/<C-R>=&ignorecase ? '\c' : '\C'<CR><C-R>///gn<CR>
