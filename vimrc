@@ -64,3 +64,9 @@ set pastetoggle=,p
 
 " Show number of matches with ,c (http://stackoverflow.com/questions/4668623/show-count-of-matches-in-vim)
 nnoremap ,c :%s/<C-R>=&ignorecase ? '\c' : '\C'<CR><C-R>///gn<CR>
+
+" Clean up searched pattern with ,<space> (https://dougblack.io/words/a-good-vimrc.html)
+nnoremap ,<space> :nohlsearch<CR>
+
+" Turn on hex mode with ,h
+nnoremap ,h :%!xxd<CR>
