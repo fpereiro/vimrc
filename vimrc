@@ -70,3 +70,6 @@ nnoremap ,<space> :nohlsearch<CR>
 
 " Turn on hex mode with ,h
 nnoremap ,h :%!xxd<CR>
+
+" Use hybrid line numbers
+set number relativenumber
