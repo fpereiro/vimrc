@@ -73,3 +73,6 @@ nnoremap ,h :%!xxd<CR>
 
 " Use hybrid line numbers
 set number relativenumber
+
+" Toggle line numbers with ,n
+nnoremap ,n :set nu! rnu!<CR>
