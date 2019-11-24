@@ -76,3 +76,6 @@ set number relativenumber
 
 " Toggle line numbers with ,n
 nnoremap ,n :set nu! rnu!<CR>
+
+" Force syntax highlighting with ,s
+nnoremap ,s :syntax sync fromstart<CR>
