@@ -80,5 +80,14 @@ nnoremap ,n :set nu! rnu!<CR>
 " Force syntax highlighting with ,s
 nnoremap ,s :syntax sync fromstart<CR>
 
-" Save current file with \s
-noremap <Leader>s :update<CR>
+" Map qi to the Esc key
+:imap qi <Esc>
+
+" Save current file with \w
+noremap <Leader>w :update<CR>
+
+" Save and quit with \q
+noremap <Leader>q :wq<CR>
+
+" Quit without saving with \Q
+noremap <Leader>Q :q!<CR>
