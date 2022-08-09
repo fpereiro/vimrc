@@ -84,10 +84,13 @@ nnoremap ,s :syntax sync fromstart<CR>
 :imap qi <Esc>
 
 " Save current file with \w
-noremap <Leader>w :update<CR>
+:imap <Leader>w <Esc>:w<CR>
+:nmap <Leader>w :w<CR>
 
 " Save and quit with \q
-noremap <Leader>q :wq<CR>
+:imap <Leader>q <Esc>:wq<CR>
+:nmap <Leader>q :wq<CR>
 
 " Quit without saving with \Q
-noremap <Leader>Q :q!<CR>
+:imap <Leader>Q <Esc>:q!<CR>
+:nmap <Leader>Q :q!<CR>
