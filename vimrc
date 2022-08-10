@@ -80,17 +80,18 @@ nnoremap ,n :set nu! rnu!<CR>
 " Force syntax highlighting with ,s
 nnoremap ,s :syntax sync fromstart<CR>
 
-" Map qi to the Esc key
-:imap qi <Esc>
+" Map qi to Ctrl+C to exit insert and command mode
+:imap qi <C-c>
+:cmap qi <C-c>
 
 " Save current file with \w
-:imap <Leader>w <Esc>:w<CR>
+:imap <Leader>w <C-c>:w<CR>
 :nmap <Leader>w :w<CR>
 
 " Save and quit with \q
-:imap <Leader>q <Esc>:wq<CR>
+:imap <Leader>q <C-c>:wq<CR>
 :nmap <Leader>q :wq<CR>
 
 " Quit without saving with \Q
-:imap <Leader>Q <Esc>:q!<CR>
+:imap <Leader>Q <C-c>:q!<CR>
 :nmap <Leader>Q :q!<CR>
