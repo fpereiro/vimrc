@@ -95,3 +95,11 @@ nnoremap ,s :syntax sync fromstart<CR>
 " Quit without saving with \Q
 :imap <Leader>Q <C-c>:q!<CR>
 :nmap <Leader>Q :q!<CR>
+
+" Set transparent bg
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+autocmd vimenter * hi EndOfBuffer guibg=NONE ctermbg=NONE
+
+" Show current directory in status bar
+set laststatus=2
+set statusline=%!getcwd()
