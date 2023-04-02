@@ -49,7 +49,7 @@ nnoremap tj  :tabprev<CR>
 nnoremap tk  :tabnext<CR>
 nnoremap tl  :tablast<CR>
 nnoremap td  :tabclose<CR>
-nnoremap tn  :tabnew<CR>
+nnoremap tn  :tabnew<CR>:Explore<CR>
 nnoremap t[  :tabmove -1<CR>
 nnoremap t]  :tabmove +1<CR>
 
@@ -103,3 +103,14 @@ autocmd vimenter * hi EndOfBuffer guibg=NONE ctermbg=NONE
 " Show current directory in status bar
 set laststatus=2
 set statusline=%!getcwd()
+
+" Netrw: do not show banner
+let g:netrw_banner = 0
+" Netrw: show files in tree
+let g:netrw_liststyle = 3
+" Netrw: show relative linenumbers
+set updatetime=100
+autocmd CursorHold * if (&filetype == 'netrw' && &number == 0) | set number relativenumber | endif
+
+" Open netrw with -
+nnoremap - :e .<CR>
