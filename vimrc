@@ -115,5 +115,5 @@ autocmd CursorHold * if (&filetype == 'netrw' && &number == 0) | set number rela
 " Open netrw with -
 nnoremap - :e .<CR>
 
-" Copy everything between 'a and 'b with 0
-nnoremap 0 :'a,'by<CR>
+" Copy everything between 'a and 'b with +
+nnoremap + :'a,'by<CR>
