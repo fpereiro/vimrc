@@ -117,3 +117,6 @@ nnoremap - :e .<CR>
 
 " Copy everything between 'a and 'b with +
 nnoremap + :'a,'by<CR>
+
+" Use system clipboard for copy and paste
+set clipboard=unnamedplus
