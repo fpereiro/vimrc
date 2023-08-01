@@ -100,9 +100,9 @@ nnoremap ,s :syntax sync fromstart<CR>
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 autocmd vimenter * hi EndOfBuffer guibg=NONE ctermbg=NONE
 
-" Show current directory in status bar
+" Show current directory & file in status bar
 set laststatus=2
-set statusline=%!getcwd()
+set statusline=%{getcwd()}/%t
 
 " Netrw: do not show banner
 let g:netrw_banner = 0
@@ -120,3 +120,6 @@ nnoremap + :'a,'by<CR>
 
 " Use system clipboard for copy and paste
 set clipboard=unnamedplus
+
+" Do not copy deleted lines to the clipboard
+nnoremap dd "_dd
