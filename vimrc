@@ -120,6 +120,3 @@ nnoremap + :'a,'by<CR>
 
 " Use system clipboard for copy and paste
 set clipboard=unnamedplus
-
-" Do not copy deleted lines to the clipboard
-nnoremap dd "_dd
