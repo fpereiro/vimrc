@@ -111,6 +111,8 @@ let g:netrw_liststyle = 3
 " Netrw: show relative linenumbers
 set updatetime=100
 autocmd CursorHold * if (&filetype == 'netrw' && &number == 0) | set number relativenumber | endif
+" Netrw: do not lose position when navigating away from tab and then back
+let g:netrw_fastbrowse= 2
 
 " Open netrw with -
 nnoremap - :e .<CR>
