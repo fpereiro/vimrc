@@ -53,6 +53,10 @@ nnoremap tn  :tabnew<CR>:Explore<CR>
 nnoremap t[  :tabmove -1<CR>
 nnoremap t]  :tabmove +1<CR>
 
+" Window shortcuts
+nnoremap tt  :wincmd w<CR>
+nnoremap ts  :split<CR>
+
 " Don't start ed compatibility mode
 nnoremap Q <nop>
 
